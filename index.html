@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+   <link rel="stylesheet" href="./style.css" />
+   <title>CSS Grid Layout</title>
+</head>
+
+<body>
+   <div class="reveal">
+      <div class="slides">
+         <section>
+            <h1>CSS Grid Layout</h1>
+            <img src="/public/images/slide-0.jpg" alt="funny cat" />
+         </section>
+         <section>
+            <h2>Specifications</h2>
+            <ul class="speca">
+               <li><span class="code">1fr</span> (fraction) is a special unit of measurement introduced in this
+                  specification.</li>
+               <li>
+                  It is not measured in any specific units of measurement (<span class="code">px</span>, <span
+                     class="code">em</span>, <span class="code">rem</span>, others).
+               </li>
+               <li>It follows that we cannot use it along with the function calc().</li>
+               <li>This unit of measurement cannot be less than one, and also cannot take negative values.</li>
+               <li>It is calculated after all other values different from fr were calculated.</li>
+            </ul>
+         </section>
+         <section>
+            <h2>Specifications</h2>
+            <ul class="speca">
+               <li><span class="code">auto</span> — It behaves quite interestingly and uses a cunning algorithm to
+                  calculate the size.</li>
+               <li>In some situations, it may seem that this unit of measurement works just like fr.</li>
+               <li>The main difference, auto will be calculated before it is calculated fr.</li>
+            </ul>
+         </section>
+         <section>
+            <h2>Tracks</h2>
+            <p>
+               The container-network is of two types: the usual <code>display:grid</code> and the built-in
+               <code>display:inline-grid</code>.
+            </p>
+            <ul class="speca">
+               <li><code>display: grid</code> — generates the grid-container of the block level.</li>
+               <li><code>display: inline-grid</code> — generates the grid string level.</li>
+            </ul>
+         </section>
+         <section>
+            <h2>Determination of a clear grid</h2>
+            <p>
+               The number of lines / columns is determined using the properties of grid-template-rows and
+               grid-template-columns. Properties are not inherited.
+            </p>
+            <ul class="speca">
+               <li>
+                  <code>grid-template-columns</code> — sets the speakers.
+               </li>
+               <li>
+                  <code>grid-template-rows</code> — sets columns.
+               </li>
+               <li>
+                  <code>grid-template-areas</code> — sets cell identifiers.
+               </li>
+            </ul>
+         </section>
+         <section>
+            <h2>Determination of an implicit grid</h2>
+            <p>
+               The grid-auto-flow property controls the automatic placement of the mesh elements without a clear
+               position. The property is not inherited.
+            </p>
+            <ul class="speca">
+               <li>
+                  <code>grid-auto-columns</code> — sets the implicit speakers of the grid.
+               </li>
+               <li>
+                  <code>grid-auto-rows</code> — sets implicit lines of the grid.
+               </li>
+               <li>
+                  <code>grid-auto-flow</code> — sets cell identifiers.
+               </li>
+            </ul>
+         </section>
+         <section>
+            <h2>Alignment along the horizontal axis</h2>
+            <p>
+               Envals the contents along the axis of the line. This value is applied to all elements of the grid inside
+               the container. The property is not inherited.
+            </p>
+            <ul class="speca">
+               <li>
+                  <code>justify-items: stretch</code> — fills the entire width.
+               </li>
+               <li>
+                  <code>justify-items: start</code> — redes the contents on the left side.
+               </li>
+               <li>
+                  <code>justify-items: end</code> — envals the contents on the right side.
+               </li>
+               <li>
+                  <code>justify-items: center</code> — leagues the contents in the center.
+               </li>
+            </ul>
+         </section>
+         <section>
+            <h2>Alignment along the vertical axis</h2>
+            <p>
+               Envals the contents along the vertical axis.This value is applied to all elements of the grid inside the
+               container. The property is not inherited.
+            </p>
+            <ul class="speca">
+               <li>
+                  <code>align-items: stretch</code> — fills the entire width.
+               </li>
+               <li>
+                  <code>align-items: start</code> — aligns the contents on the upper side.
+               </li>
+               <li>
+                  <code>align-items: end</code> — envals the contents on the lower side.
+               </li>
+               <li>
+                  <code>align-items: center</code> — legs the contents in the center.
+               </li>
+            </ul>
+         </section>
+         <section>
+            <h2>Alignment of the grid along the horizontal</h2>
+            <p>
+               Envals the grid along the horizontal axis. Faithing elements. The property is not inherited.
+            </p>
+            <ul class="speca">
+               <li>
+                  <code>justify-content: stretch</code> — the grid could fill the entire width
+               </li>
+               <li>
+                  <code>justify-content: start</code> — envals the grid on the left side.
+               </li>
+               <li>
+                  <code>justify-content: end</code> — envals the grid on the right side.
+               </li>
+               <li>
+                  <code>justify-content: center</code> — envals the grid in the center.
+               </li>
+               <li>
+                  <code>justify-content: space-between</code> — the space between the elements, without indentation along the edges.
+               </li>
+               <li>
+                  <code>justify-content: space-around</code> — the space between the elements and semi-size indentes along the edges.
+               </li>
+               <li>
+                  <code>justify-content: space-evenly</code> — The space between the elements and the full-size indenting along the edges.
+               </li>
+            </ul>
+         </section>
+         <section>
+            <h2>Alignment of the grid along the vertical axis</h2>
+            <p>
+               Envals the grid along the vertical axis. The property is not inherited.
+            </p>
+            <ul class="speca">
+               <li>
+                  <code>align-content: stretch</code> — the grid could fill the entire width
+               </li>
+               <li>
+                  <code>align-content: start</code> — envals the grid on the upper side.
+               </li>
+               <li>
+                  <code>align-content: end</code> — envals the grid on the bottom.
+               </li>
+               <li>
+                  <code>align-content: center</code> — envals the net in the center.
+               </li>
+               <li>
+                  <code>align-content: space-between</code> — the space between the elements, without indentation along the edges.
+               </li>
+               <li>
+                  <code>align-content: space-around</code> — the space between the elements and semi-size indentes along the edges.
+               </li>
+               <li>
+                  <code>align-content: space-evenly</code> — The space between the elements and the full-size indenting along the edges.
+               </li>
+            </ul>
+         </section>
+      </div>
+   </div>
+
+   <script type="module" src="/main.js"></script>
+</body>
+
+</html>
